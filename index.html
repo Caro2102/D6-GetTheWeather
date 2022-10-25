@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="styles.css"/>
+    <title>Weather Dashboard</title>
+</head>
+
+<body>
+    <div class="container-fluid ">
+        <header >
+            <h1>Weather Dashboard</h1>
+        </header>
+    </div>
+    <main class="container-fluid ">
+        <div class="row">
+        <div class="col-lg-3">
+              <form id="user-form" >
+                  <h3 class=" font-weight-bold">Search for a City:</h3>
+                  <input class="form-control me-2 mt-mb-3" id="cityname" type="search" placeholder="Search" aria-label="Search">
+                  <button type="button" class="btn btn-primary btn-block mt-1" id="btn-user" onclick="save()">Search</button>
+              </form>
+              <div class="container-li " id="card-li"></div>
+           <div class="card border-0" >
+            <form id="card-search" class="card-body ">
+  
+            </form>
+  
+           </div>
+        </div> 
+           <div class="col-lg-9">
+            <div class="row mr-0">
+              <div class="col-lg-11 card m-3 d-none" id="city-container">
+                  <div class="card-body" id="cityForm">
+  
+                  </div>
+              </div>
+            </div>
+            <div class="row d-none" id="fiveday-header">
+                <div class="col-12">
+                    <h3>5-Day Forecast</h3>
+                </div>
+            </div>
+              <div id="day-forecast" class="row "></div>
+          </div>
+        </div>
+          
+   
+    </main>    
+   
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

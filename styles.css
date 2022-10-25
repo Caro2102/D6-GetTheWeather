@@ -1,0 +1,30 @@
+body{
+    font-family: 'Hind Siliguri', sans-serif;
+}
+h1{
+    color: white;
+    font-size: 1.5em;
+    background: rgb(40,129,227);
+    background: linear-gradient(90deg, rgba(40,129,227,1) 0%, rgba(23,23,128,1) 90%);
+    text-align:center ;
+    margin-top: 5px;
+    margin-bottom: 0px;
+    padding-left: 250px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+h2{
+    margin-top: 7px;
+    margin-bottom: 15px;
+}
+.containerS{
+    height: 100%;
+    width: 40%;
+}
+
+@media (max-width: 954px){
+    h1{
+        padding-left: 0;
+    }
+  
+}

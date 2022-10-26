@@ -118,3 +118,47 @@ function getWeather(citynames){
       divR.appendChild(pHumidity2); 
     }
   }
+  
+//Guardar en local storage
+function save(){
+    var sCities=[];
+    if ( localStorage.getItem('City') != undefined ){
+      sCities = JSON.parse(localStorage.getItem('City'));
+    }
+    sCity=nameInputEl.value;
+    sCities.push(sCity);
+    localStorage.setItem('City',JSON.stringify(sCities));
+    citySearch();
+  }
+  //Crear botones par historial de busqueda
+  function citySearch(){
+    var sCities=[];
+    var htmlText="";
+    if ( localStorage.getItem('City') != undefined ){
+      sCities = JSON.parse(localStorage.getItem('City'));
+      for(var i=0;i<sCities.length;i++){
+          
+          htmlText+="<button type='button' class='btn btn-secondary btn-block mt-1 btnCity'  >"+sCities[i]+"</button>";
+          }
+  
+          liContainer.innerHTML=htmlText;   
+      }
+      
+    }
+  //Al hacer click en historial desplegar clima
+  function btn(){
+    var botones= document.querySelectorAll('.btnCity');
+      for(var i=0;i<botones.length;i++){
+         botones[i].addEventListener('click',function(e){
+            getWeather(e.target.innerHTML);
+  
+          });
+        }
+  }
+  //Buscar
+  userBtn.addEventListener('click',function(){
+    var cityn=nameInputEl.value.trim();
+      getWeather(cityn);
+  
+  });
+  

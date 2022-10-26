@@ -12,11 +12,13 @@
 </head>
 
 <body>
+    <!--Titulo-->
     <div class="container-fluid ">
         <header >
             <h1>Weather Dashboard</h1>
         </header>
     </div>
+    <!--Contenedor card search-->
     <main class="container-fluid ">
         <div class="row">
         <div class="col-lg-3">
@@ -25,6 +27,7 @@
                   <input class="form-control me-2 mt-mb-3" id="cityname" type="search" placeholder="Search" aria-label="Search">
                   <button type="button" class="btn btn-primary btn-block mt-1" id="btn-user" onclick="save()">Search</button>
               </form>
+              <!--botones del historial de busqueda-->
               <div class="container-li " id="card-li"></div>
            <div class="card border-0" >
             <form id="card-search" class="card-body ">
@@ -33,6 +36,7 @@
   
            </div>
         </div> 
+         <!--Contenedor clima actual-->
            <div class="col-lg-9">
             <div class="row mr-0">
               <div class="col-lg-11 card m-3 d-none" id="city-container">
@@ -46,6 +50,7 @@
                     <h3>5-Day Forecast</h3>
                 </div>
             </div>
+            <!--Contenedor clima 5 dias-->
               <div id="day-forecast" class="row "></div>
           </div>
         </div>

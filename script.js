@@ -11,6 +11,7 @@ citySearch();
 btn();
 //Solicitar respuesta de API
 function getWeather(citynames){
+  btn();
   cityContainer.classList.remove("d-none");
   cityContainer.textContent = '';
     dayForecast.textContent='';
@@ -33,6 +34,8 @@ function getWeather(citynames){
     });
   }
   function displayCity(cities) {
+  cityContainer.innerHTML='';
+  dayForecast.innerHTML='';
     if (cities === 0) {
       cityContainer.textContent = 'No se encontro la ciudad.';
       return;
